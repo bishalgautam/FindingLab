@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C8AD67D1CE6A2DD00A76199 /* PresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8AD67C1CE6A2DD00A76199 /* PresentViewController.swift */; };
 		2CF518301CDEF8AF00A12841 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF5182F1CDEF8AF00A12841 /* AppDelegate.swift */; };
 		2CF518321CDEF8AF00A12841 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF518311CDEF8AF00A12841 /* ViewController.swift */; };
 		2CF518351CDEF8AF00A12841 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF518331CDEF8AF00A12841 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C8AD67C1CE6A2DD00A76199 /* PresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentViewController.swift; sourceTree = "<group>"; };
 		2CF5182C1CDEF8AF00A12841 /* FindingLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindingLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF5182F1CDEF8AF00A12841 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CF518311CDEF8AF00A12841 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				2CF5182F1CDEF8AF00A12841 /* AppDelegate.swift */,
 				2CF518311CDEF8AF00A12841 /* ViewController.swift */,
+				2C8AD67C1CE6A2DD00A76199 /* PresentViewController.swift */,
 				2CF518331CDEF8AF00A12841 /* Main.storyboard */,
 				2CF518361CDEF8AF00A12841 /* Assets.xcassets */,
 				2CF518381CDEF8AF00A12841 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				2CF518321CDEF8AF00A12841 /* ViewController.swift in Sources */,
 				2CF518301CDEF8AF00A12841 /* AppDelegate.swift in Sources */,
+				2C8AD67D1CE6A2DD00A76199 /* PresentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

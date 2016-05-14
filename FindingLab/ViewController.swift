@@ -15,6 +15,8 @@ import AVFoundation
 class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
    // var library : ALAssetsLibrary = ALAssetsLibrary()
     
+      var lat  : CLLocationDegrees = 0.00
+      var long : CLLocationDegrees = 0.00
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -37,8 +39,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     func imagePickerController(picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         picker.dismissViewControllerAnimated(true, completion: { () in
+            
             if (picker.sourceType == .PhotoLibrary) {
                 let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+                
                  let library = ALAssetsLibrary()
                // let library = PHPhotoLibrary()
 
@@ -49,12 +53,22 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
                         let latitude = (asset.valueForProperty(ALAssetPropertyLocation) as! CLLocation!).coordinate.latitude
                         let longitude = (asset.valueForProperty(ALAssetPropertyLocation) as! CLLocation!).coordinate.longitude
                         print("\(latitude), \(longitude)")
+                        
+                        self.lat = latitude
+                        self.long = longitude
+                        
+                        
                     }
                     },
                     failureBlock: { (error: NSError!) in
                         print(error.localizedDescription)
+                
                 })
+                
+                
             }
+            
+            self.performSegueWithIdentifier("nextSegue", sender: nil)
         })
 //        // Get the image captured by the UIImagePickerController
 //        let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
@@ -74,8 +88,20 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "nextSegue" {
+            let destination = segue.destinationViewController as! PresentViewController
+           // let bViewController = destination.topViewController as! PresentViewController
+            
+            destination.lat = lat
+            destination.long = long
+            
+            
+            // pass data
+        }
+    }
     func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
         
         var scaledSize = CGSize(width: maxDimension, height: maxDimension)
