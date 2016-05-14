@@ -9,3 +9,12 @@ Use Cases
 - [X] Server/Cloud: deep learning engine for matching, searching, age estimation, and age progression matching, and others
 - [X] App: browsing, searching, social, take picture and upload
 - [X] Web: browsing, searching, social
+
+
+## Video Walkthrough 
+
+Here's a walkthrough of implemented user stories:
+
+<img src='https://i.imgur.com/UaHXGsc.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
